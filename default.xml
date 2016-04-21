@@ -30,4 +30,6 @@
      <copyfile src="imx/tools/fsl-setup-release.sh" dest="fsl-setup-release.sh"/>
   </project>
 
+  <project remote="bw-release" name="meta-nfc.git" path="sources/meta-nfc" revision="master" />
+
 </manifest>
