@@ -1,4 +1,4 @@
-Freescale's Community Yocto BSP
+Bluewind Yocto BSP
 ===============================
 
 To get the BSP you need to have `repo` installed.
@@ -12,9 +12,9 @@ $: PATH=${PATH}:~/bin
 
 Download the BSP Yocto Project Environment into your directory:
 -------------------------------------------
-$: mkdir fsl-arm-yocto-bsp
+$: mkdir bw-arm-yocto-bsp
 $: cd fsl-arm-yocto-bsp
-$: repo init -u git://git.freescale.com/imx/fsl-arm-yocto-bsp.git -b imx-4.1.15-1.0.0_ga
+$: repo init -u https://github.com/bluewind-embedded-systems/bw-arm-yocto-bsp.git -b imx-4.1.15-1.0.0_ga_viggentwo
 $: repo sync
 
 Note this downloads the latest patches on top of the 4.1.15-1.0.0 ga release.
@@ -25,26 +25,22 @@ See ChangeLog for description of patch releases and tags for each update.
 
 To checkout the GA release without patches do the following:
 $: cd sources/meta-fsl-bsp-release
-$: git checkout imx_4.1.15_1.0.0_ga
+$: git checkout jethro_4.1.15-1.0.0_ga_viggentwo
 
 Setup for a particular graphical backend.
 -----------------------------------------
-The examples uses imx6sabresd MACHINE but substitute with whatever you are using:
 
 Setup for X11.
-$: MACHINE=imx6qsabresd DISTRO=fsl-imx-x11 source ./fsl-setup-release.sh -b bld-x11
+$: MACHINE=imx6ulviggentwo DISTRO=bw-imx-x11 source ./fsl-setup-release.sh -b bld-x11
 
 Setup for Wayland.
-$: MACHINE=imx6qsabresd DISTRO=fsl-imx-wayland source ./fsl-setup-release.sh -b bld-wayland
+$: MACHINE=imx6ulviggentwo DISTRO=bw-imx-wayland source ./fsl-setup-release.sh -b bld-wayland
 
 Setup for Wayland and X11.
-$: MACHINE=imx6qsabresd DISTRO=fsl-imx-xwayland source ./fsl-setup-release.sh -b bld-xwayland
-
-Setup for DirectFB.
-$: MACHINE=imx6qsabresd DISTRO=fsl-imx-dfb source ./fsl-setup-release.sh -b bld-dfb
+$: MACHINE=imx6ulviggentwo DISTRO=bw-imx-xwayland source ./fsl-setup-release.sh -b bld-xwayland
 
 Setup for Frame Buffer.
-$: MACHINE=imx6qsabresd DISTRO=fsl-imx-fb source ./fsl-setup-release.sh -b bld-fb
+$: MACHINE=imx6ulviggentwo DISTRO=bw-imx-fb source ./fsl-setup-release.sh -b bld-fb
 
 Build an image:
 ---------------
