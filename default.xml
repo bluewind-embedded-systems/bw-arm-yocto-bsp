@@ -3,7 +3,7 @@
 
   <default sync-j="2"/>
 
-  <remote fetch="http://za:goodluck@git.bwlocal.it/za/" name="bw-release" />
+  <remote fetch="git://github.com/bluewind-embedded-systems" name="bw-release" />
   <remote fetch="git://git.yoctoproject.org" name="yocto"/>
   <remote fetch="git://github.com/Freescale" name="freescale"/>
   <remote fetch="git://git.openembedded.org" name="oe"/>
@@ -26,10 +26,10 @@
   <project remote="OSSystems" revision="b6d46d69a261fe6bd7c1e9811dc2a9bbd0b79aeb" name="meta-browser" path="sources/meta-browser" />
   <project remote="QT5" revision="d5536e34ec985c82b621448ab4325e5cbba38560" name="meta-qt5" path="sources/meta-qt5" />
 
-  <project remote="bw-release" name="meta-bw-bsp-release.git" path="sources/meta-fsl-bsp-release" revision="jethro_4.1.15-1.0.0_ga_viggentwo" >
+  <project remote="bw-release" name="meta-bw-bsp-release" path="sources/meta-fsl-bsp-release" revision="jethro_4.1.15-1.0.0_ga_viggentwo" >
      <copyfile src="imx/tools/fsl-setup-release.sh" dest="fsl-setup-release.sh"/>
   </project>
 
-  <project remote="bw-release" name="meta-nfc.git" path="sources/meta-nfc" revision="master" />
+  <project remote="bw-release" name="meta-nfc" path="sources/meta-nfc" revision="master" />
 
 </manifest>
